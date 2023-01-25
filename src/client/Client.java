@@ -37,7 +37,7 @@ public class Client extends Application {
         Scene scene = new Scene(root, 1024, 768);
 
         //Windowsos ablak keretenek a szovegezese
-        stage.setTitle("Ez lesz az alkalmazas neve a kereten");
+        stage.setTitle("Csomagautomata");
 
         //Windowsos alkalmazas ikonja
         stage.getIcons().add(new Image("file:szakdoga_kosar.jpg"));
