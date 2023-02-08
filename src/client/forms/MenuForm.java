@@ -91,6 +91,7 @@ public class MenuForm {
         menu.getMenus().add(menuName4);
         menu.getMenus().add(menuName5);
         menu.getMenus().add(menuName6);
+        menu.getMenus().add(menuName9);
 
 
         menu.getMenus().add(menuName9);
