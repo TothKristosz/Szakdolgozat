@@ -14,7 +14,9 @@ public class Server {
 
         //ide jon az uzleti logika
         //Logger beallitasa
-        //Adatbázis felepitese
+        //Adatbazis felepitese basic SQL kod a teszt miatt
+        //minta adatok feltöltésenek a kodja jon majd ide
+
         //Kliensrol kiadott utasítasok felgolgozasa
         //stb
     }

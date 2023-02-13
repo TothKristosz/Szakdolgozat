@@ -14,7 +14,7 @@ public class LoginForm {
 
     private Node getContent() {
         BorderPane borderPane = new BorderPane();
-        Label lbl = new Label("Én vagyok a login Ablak");
+        Label lbl = new Label("En vagyok a login Ablak");
         borderPane.setCenter(lbl);
         return borderPane;
     }

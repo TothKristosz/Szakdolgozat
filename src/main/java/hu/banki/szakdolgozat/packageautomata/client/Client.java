@@ -12,12 +12,12 @@ import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-//Uj javaFx Application class kiegeszítese a sajat reszunkre (extends)
+//Uj javaFx Application class kiegeszitese a sajat reszunkre (extends)
 public class Client extends Application {
 
     private static final Logger logger = LoggerFactory.getLogger(Client.class);
 
-    //Így kell indítani ez a start fv atnevezheto
+    //igy kell inditani ez a start fv atnevezheto
     public void start() {
         logger.info("Client Started");
         launch();

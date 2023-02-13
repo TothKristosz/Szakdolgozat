@@ -9,7 +9,7 @@ import static hu.banki.szakdolgozat.packageautomata.client.forms.ContentManager.
 
 public class HomePage {
     JFrame frame = new JFrame();
-    JLabel welcomeLabel = new JLabel("CSÁ");
+    JLabel welcomeLabel = new JLabel("CSA");
 
     public HomePage(JFrame frame) {
         welcomeLabel.setBounds(100,100,200,350);
@@ -24,7 +24,7 @@ public class HomePage {
     public Node getContent() {
         //Alap beallitasok, ami mindig latszanak majd. Header a menu alatt lesz!
         //UI_CONTENT_ROOT.setTop(new HeaderForm().getHeader());
-        //ide kellene beszúrni a LOGIN/EXIT panelt
+        //ide kellene beszurni a LOGIN/EXIT panelt
         UI_CONTENT_ROOT.setCenter(new Label("F?oldal"));
         return UI_CONTENT_ROOT;
     }

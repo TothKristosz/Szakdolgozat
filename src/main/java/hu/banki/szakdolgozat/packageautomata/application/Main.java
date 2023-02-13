@@ -13,6 +13,7 @@ public class Main {
 
         Server server = new Server();
         server.start();
+        System.out.println("Hello");
 
         Client client = new Client();
         client.start();
