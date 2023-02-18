@@ -1,5 +1,6 @@
 package hu.banki.szakdolgozat.packageautomata.client.forms;
 
+import hu.banki.szakdolgozat.packageautomata.server.models.Package;
 import hu.banki.szakdolgozat.packageautomata.server.models.Person;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -56,7 +57,10 @@ public class Page13Form {
     private ObservableList<Person> getTeamMembers() {
         return FXCollections.observableArrayList(
                 new Person("firstname1", "lastname1", "aa", 1, 2, 3),
-                new Person("firstname2", "lastname2", "bb", 4, 5, 6)
+                new Person("firstname2", "lastname2", "bb", 4, 5, 6),
+                //nem tudom miért nem m?ködik a következ? sor
+                new Package(1,2023,1,1,1,true,"delivered",1),
+                new Package(2,2021,2,2,2,false,"inStock",2),
 
                 //String sendOrReceive,int id, int permission, int adressid
         );
