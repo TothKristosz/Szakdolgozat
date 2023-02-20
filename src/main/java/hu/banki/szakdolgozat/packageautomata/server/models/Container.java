@@ -12,4 +12,10 @@ public class Container {
     private IntegerProperty addressID;
     private StringProperty size;
 
+    public Container(int id,int addressID, String size){
+        setid(id);
+        setaddressID(addressID);
+        setsize(size);
+    }
+
 }
