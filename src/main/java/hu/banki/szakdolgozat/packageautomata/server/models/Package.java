@@ -33,11 +33,11 @@ public class Package {
     }
     // packageID
     public int getPackageID() {
-        return packageID.get();
+        return  packageIDProperty().get();
     }
 
     public void setPackageID(int value) {
-        packageID.set(value);
+        packageIDProperty().set(value);
     }
 
     public IntegerProperty packageIDProperty() {
@@ -53,7 +53,7 @@ public class Package {
     }
 
     public void setDate(int value) {
-        date.set(value);
+        dateProperty().set(value);
     }
 
     public IntegerProperty dateProperty() {
@@ -65,11 +65,11 @@ public class Package {
 
     // shelfTypeID
     public int getShelfTypeID() {
-        return shelfTypeID.get();
+        return shelfTypeIDProperty().get();
     }
 
     public void setShelfTypeID(int value) {
-        shelfTypeID.set(value);
+        shelfTypeIDProperty().set(value);
     }
 
     public IntegerProperty shelfTypeIDProperty() {
@@ -81,11 +81,11 @@ public class Package {
 
     // receiverMachineID
     public int getReceiverMachineID() {
-        return receiverMachineID.get();
+        return receiverMachineIDProperty().get();
     }
 
     public void setReceiverMachineID(int value) {
-        receiverMachineID.set(value);
+        receiverMachineIDProperty().set(value);
     }
 
     public IntegerProperty receiverMachineIDProperty() {
@@ -97,11 +97,11 @@ public class Package {
 
     // customerID
     public int getCustomerID() {
-        return customerID.get();
+        return customerIDProperty().get();
     }
 
     public void setCustomerID(int value) {
-        customerID.set(value);
+        customerIDProperty().set(value);
     }
 
     public IntegerProperty customerIDProperty() {
@@ -113,11 +113,11 @@ public class Package {
 
     // packageClass
     public boolean getPackageClass() {
-        return packageClass.get();
+        return packageClassProperty().get();
     }
 
     public void setPackageClass(boolean value) {
-        packageClass.set(value);
+        packageClassProperty().set(value);
     }
 
     public BooleanProperty packageClassProperty() {
@@ -129,11 +129,11 @@ public class Package {
 
     // status
     public String getStatus() {
-        return status.get();
+        return statusProperty().get();
     }
 
     public void setStatus(String value) {
-        status.set(value);
+        statusProperty().set(value);
     }
 
     public StringProperty statusProperty() {
@@ -145,11 +145,11 @@ public class Package {
 
     // ReceiverID
     public int getReceiverID() {
-        return receiverID.get();
+        return ReceiverIDProperty().get();
     }
 
     public void setReceiverID(int value) {
-        receiverID.set(value);
+        ReceiverIDProperty().set(value);
     }
 
     public IntegerProperty ReceiverIDProperty() {

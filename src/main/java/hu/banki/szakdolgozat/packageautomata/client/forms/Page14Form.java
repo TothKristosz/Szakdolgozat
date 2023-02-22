@@ -1,7 +1,6 @@
 package hu.banki.szakdolgozat.packageautomata.client.forms;
 
 import hu.banki.szakdolgozat.packageautomata.server.models.Package;
-import hu.banki.szakdolgozat.packageautomata.server.models.Person;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Node;
@@ -11,7 +10,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 
 
-public class Page13Form {
+public class Page14Form {
 
 
     public Node getForm() {
@@ -23,26 +22,33 @@ public class Page13Form {
 
     public Node getContent() {
         // Tabla letrehozasa
-        TableView<Person> table = new TableView<Person>();
+        TableView<Package> table = new TableView<Package>();
         //Tabla feltoltesehez az adatok beszerzese
-        ObservableList<Person> teamMembers = getTeamMembers();
+        ObservableList<Package> packageList = getPackageList();
         //Tabla es adatok osszerendezese
-        table.setItems(teamMembers);
+        table.setItems(packageList);
 
         //Fejlec mezok megadasa
-        TableColumn<Person,String> firstNameCol = new TableColumn<Person,String>("First Name");
+        TableColumn<Package,Integer> packageID = new TableColumn<Package,Integer>("PackageID");
         //Adott fejlechez melyik oszlop tartozik
-        firstNameCol.setCellValueFactory(new PropertyValueFactory<>("firstName"));
+        packageID.setCellValueFactory(new PropertyValueFactory<>("packageID"));
 
 
-        TableColumn<Person,String> lastNameCol = new TableColumn<Person,String>("Last Name");
-        lastNameCol.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+        TableColumn<Package,Integer> date = new TableColumn<Package,Integer>("Date");
+        date.setCellValueFactory(new PropertyValueFactory<>("date"));
+
+
+        TableColumn<Package,Integer> third = new TableColumn<Package,Integer>("Shelf Type ID");
+        third.setCellValueFactory(new PropertyValueFactory<>("shelfTypeId"));
 
         //tabla oszlopainak hozzarendfelese a tablahoz
 //        table.getColumns().clear();
 //        table.getItems().clear();
-        table.getColumns().add(firstNameCol);
-        table.getColumns().add(lastNameCol);
+
+        table.getColumns().add(packageID);
+        table.getColumns().add(date);
+        table.getColumns().add(third);
+
 
         BorderPane borderPane = new BorderPane();
         borderPane.setCenter(table);
@@ -54,15 +60,13 @@ public class Page13Form {
 
 
     //Mintaadatokkal valo feltoltes. A program ezt a reszt adatbazisbol veszi majd!
-    private ObservableList<Person> getTeamMembers() {
+    private ObservableList<Package> getPackageList() {
         return FXCollections.observableArrayList(
-                new Person("firstname1", "lastname1", "aa", 1, 2, 3),
-                new Person("firstname2", "lastname2", "bb", 4, 5, 6)
-                //nem tudom miért nem m?ködik a következ? sor
-                //new Package(1,2023,1,1,1,true,"delivered",1),
-                //new Package(2,2021,2,2,2,false,"inStock",2),
+                new Package(1,2023,1,1,1,true,"delivered",1),
+                new Package(2,2021,2,2,2,false,"inStock",2)
 
-                //String sendOrReceive,int id, int permission, int adressid
+                //tabla feltoltese DB-bol
+
         );
     }
 
