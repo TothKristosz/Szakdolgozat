@@ -49,7 +49,7 @@ public class Package {
 
     // date
     public int getDate() {
-        return date.get();
+        return dateProperty().get();
     }
 
     public void setDate(int value) {

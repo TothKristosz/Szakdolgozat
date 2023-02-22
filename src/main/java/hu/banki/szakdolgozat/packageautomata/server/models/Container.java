@@ -22,11 +22,11 @@ public class Container {
 
     // getters and setters for id
     public int getid() {
-        return id.get();
+        return idProperty().get();
     }
 
     public void setid(int value) {
-        id.set(value);
+        idProperty().set(value);
     }
 
     public IntegerProperty idProperty() {
@@ -38,11 +38,11 @@ public class Container {
 
     // getters and setters for addressID
     public int getAddressID() {
-        return addressID.get();
+        return addressIDProperty().get();
     }
 
     public void setAddressID(int value) {
-        addressID.set(value);
+        addressIDProperty().set(value);
     }
 
     public IntegerProperty addressIDProperty() {
@@ -54,11 +54,11 @@ public class Container {
 
     // getters and setters for size
     public String getSize() {
-        return size.get();
+        return sizeProperty().get();
     }
 
     public void setSize(String value) {
-        size.set(value);
+        sizeProperty().set(value);
     }
 
     public StringProperty sizeProperty() {
