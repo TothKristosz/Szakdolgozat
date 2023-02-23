@@ -13,7 +13,7 @@ public class Package {
     //ReceiverID int
 
     private IntegerProperty packageID;
-    private IntegerProperty date;
+    private StringProperty date;
     private IntegerProperty shelfTypeID;
     private IntegerProperty receiverMachineID;
     private IntegerProperty customerID;
@@ -21,7 +21,7 @@ public class Package {
     private StringProperty status;
     private IntegerProperty receiverID;
 
-    public Package(int packageID, int date, int shelfTypeId, int receiverMachineID, int customerID, boolean packageClass, String status, int receiverID){
+    public Package(int packageID, String date, int shelfTypeId, int receiverMachineID, int customerID, boolean packageClass, String status, int receiverID){
     setPackageID(packageID);
     setDate(date);
     setShelfTypeID(shelfTypeId);
@@ -48,17 +48,17 @@ public class Package {
     }
 
     // date
-    public int getDate() {
+    public String getDate() {
         return dateProperty().get();
     }
 
-    public void setDate(int value) {
+    public void setDate(String value) {
         dateProperty().set(value);
     }
 
-    public IntegerProperty dateProperty() {
+    public StringProperty dateProperty() {
         if (date == null) {
-            date = new SimpleIntegerProperty(this, "date");
+            date = new SimpleStringProperty(this, "date");
         }
         return date;
     }

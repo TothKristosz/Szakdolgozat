@@ -62,8 +62,9 @@ public class Page14Form {
     //Mintaadatokkal valo feltoltes. A program ezt a reszt adatbazisbol veszi majd!
     private ObservableList<Package> getPackageList() {
         return FXCollections.observableArrayList(
-                new Package(1,2023,1,1,1,true,"delivered",1),
-                new Package(2,2021,2,2,2,false,"inStock",2)
+                new Package(1,"2023",1,1,1,true,"delivered",1),
+                new Package(2,"2021",2,2,2,false,"inStock",2)
+
 
                 //tabla feltoltese DB-bol
 
