@@ -46,7 +46,7 @@ public class Server {
             StringBuilder  sql2 = new StringBuilder("SELECT * from vdtb_package");
             ResultSet rs =  new MySqlStatements().selectDataRows(conn,sql2);
             while(rs.next()){
-                System.out.println(rs.getString(7));
+                System.out.println(rs.getInt(1));
                 Package X = new Package(rs.getInt(1),rs.getString(2),rs.getInt(3),
                         rs.getInt(4),rs.getInt(5),rs.getBoolean(6),
                         rs.getString(7),rs.getInt(8));

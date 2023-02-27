@@ -1,5 +1,7 @@
 package hu.banki.szakdolgozat.packageautomata.client.forms;
 
+import hu.banki.szakdolgozat.packageautomata.server.database.MySqlConnection;
+import hu.banki.szakdolgozat.packageautomata.server.database.MySqlStatements;
 import hu.banki.szakdolgozat.packageautomata.server.models.Package;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -8,6 +10,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 
 public class Page14Form {
@@ -29,16 +35,16 @@ public class Page14Form {
         table.setItems(packageList);
 
         //Fejlec mezok megadasa
-        TableColumn<Package,Integer> packageID = new TableColumn<Package,Integer>("PackageID");
+        TableColumn<Package, Integer> packageID = new TableColumn<Package, Integer>("PackageID");
         //Adott fejlechez melyik oszlop tartozik
         packageID.setCellValueFactory(new PropertyValueFactory<>("packageID"));
 
 
-        TableColumn<Package,Integer> date = new TableColumn<Package,Integer>("Date");
+        TableColumn<Package, Integer> date = new TableColumn<Package, Integer>("Date");
         date.setCellValueFactory(new PropertyValueFactory<>("date"));
 
 
-        TableColumn<Package,Integer> third = new TableColumn<Package,Integer>("Shelf Type ID");
+        TableColumn<Package, Integer> third = new TableColumn<Package, Integer>("Shelf Type ID");
         third.setCellValueFactory(new PropertyValueFactory<>("shelfTypeId"));
 
         //tabla oszlopainak hozzarendfelese a tablahoz
@@ -58,19 +64,14 @@ public class Page14Form {
     }
 
 
-
     //Mintaadatokkal valo feltoltes. A program ezt a reszt adatbazisbol veszi majd!
     private ObservableList<Package> getPackageList() {
         return FXCollections.observableArrayList(
-                new Package(1,"2023",1,1,1,true,"delivered",1),
-                new Package(2,"2021",2,2,2,false,"inStock",2)
-
-
-                //tabla feltoltese DB-bol
-
-        );
-    }
+                new Package(1, "2023", 1, 1, 1, true, "delivered", 1),
+                new Package(2, "2021", 2, 2, 2, false, "inStock", 2));
+                //tabla feltoltese DB-bol;
 
 
 
-}
+
+} }
