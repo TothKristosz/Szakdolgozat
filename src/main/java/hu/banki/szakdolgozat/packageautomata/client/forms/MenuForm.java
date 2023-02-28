@@ -47,7 +47,6 @@ public class MenuForm {
         MenuItem menuItemName91 = new MenuItem("tesztelek1");
         MenuItem menuItemName92 = new MenuItem("tesztelek2");
         MenuItem menuItemName93 = new MenuItem("tesztelek3");
-        MenuItem menuItemName94 = new MenuItem("tesztelek4");
 
 
 
@@ -56,7 +55,6 @@ public class MenuForm {
         menuItemName91.setOnAction(event -> UI_CONTENT_ROOT.setCenter(new Page11Form().getForm()));
         menuItemName92.setOnAction(event -> UI_CONTENT_ROOT.setCenter(new Page12Form().getForm()));
         menuItemName93.setOnAction(event -> UI_CONTENT_ROOT.setCenter(new Page13Form().getForm()));
-        menuItemName94.setOnAction(event -> UI_CONTENT_ROOT.setCenter(new Page14Form().getForm()));
         //menuItemName01.setOnAction(event -> UI_CONTENT_ROOT.setCenter(new HomePage().getContent()));
 
         //BUGGOS AZ EGESZ OLDAL
@@ -84,7 +82,6 @@ public class MenuForm {
         menuName9.getItems().add(menuItemName91);
         menuName9.getItems().add(menuItemName92);
         menuName9.getItems().add(menuItemName93);
-        menuName9.getItems().add(menuItemName94);
 
         //Menuk hozzarendelese egy menubar-hoz
         MenuBar menu = new MenuBar();

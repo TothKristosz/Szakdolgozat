@@ -46,7 +46,7 @@ public class Client extends Application {
         stage.setTitle("Csomagautomata");
 
         //Windowsos alkalmazas ikonja
-        stage.getIcons().add(new Image("file:icon.png"));
+        stage.getIcons().add(new Image("file:szakdoga_kosar.jpg"));
 
         //Stage - alkalmazas, Scene a tartalom. Ossze kell rendelni oket
         stage.setScene(scene);

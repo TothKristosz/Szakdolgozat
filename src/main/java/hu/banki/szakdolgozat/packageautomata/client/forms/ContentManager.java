@@ -1,7 +1,6 @@
 package hu.banki.szakdolgozat.packageautomata.client.forms;
 
 import javafx.scene.Node;
-import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 
 public class ContentManager {

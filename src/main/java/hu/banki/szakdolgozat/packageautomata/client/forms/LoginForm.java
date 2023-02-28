@@ -5,6 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 
 public class LoginForm {
+    //ide kell az fxml-es kodokat bemasolnom
 
     public Node getForm() {
         BorderPane borderPane = new BorderPane();
@@ -18,4 +19,7 @@ public class LoginForm {
         borderPane.setCenter(lbl);
         return borderPane;
     }
+
+
+
 }

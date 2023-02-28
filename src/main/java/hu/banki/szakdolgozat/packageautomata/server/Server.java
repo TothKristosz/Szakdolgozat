@@ -1,13 +1,13 @@
 package hu.banki.szakdolgozat.packageautomata.server;
 
 import hu.banki.szakdolgozat.packageautomata.application.Main;
-import hu.banki.szakdolgozat.packageautomata.server.database.MySqlConnection;
-import hu.banki.szakdolgozat.packageautomata.server.database.MySqlStatements;
-import hu.banki.szakdolgozat.packageautomata.server.models.Package;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class Server {
 
@@ -27,33 +27,17 @@ public class Server {
         PreparedStatement stmt = null;
 
         try {
-            MySqlConnection conn2 = new MySqlConnection();
-            conn2.getConnectionWithoutSchema();
-
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://localhost/packageautomata", "boss", ".[/Hl_YaZPynAvgk");
 
-//            String sql = "INSERT INTO vdtb_city (ID, PostalCode, Name) VALUES (?, ?, ?)";
-//            stmt = conn.prepareStatement(sql);
-//            stmt.setInt(1, 4);
-//            stmt.setString(2, "3");
-//            stmt.setString(3, "Tatabánya");
-//            int rows = stmt.executeUpdate();
-//
-//            System.out.println(rows + " row(s) inserted.");
+            String sql = "INSERT INTO vdtb_city (ID, PostalCode, Name) VALUES (?, ?, ?)";
+            stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, 3);
+            stmt.setString(2, "4567");
+            stmt.setString(3, "Tata");
+            int rows = stmt.executeUpdate();
 
-
-            StringBuilder  sql2 = new StringBuilder("SELECT * from vdtb_package");
-            ResultSet rs =  new MySqlStatements().selectDataRows(conn,sql2);
-            while(rs.next()){
-                System.out.println(rs.getInt(1));
-                Package X = new Package(rs.getInt(1),rs.getString(2),rs.getInt(3),
-                        rs.getInt(4),rs.getInt(5),rs.getBoolean(6),
-                        rs.getString(7),rs.getInt(8));
-                System.out.println(X.getStatus());
-            }
-
-
+            System.out.println(rows + " row(s) inserted.");
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -62,4 +46,3 @@ public class Server {
         }
     }
 }
-
