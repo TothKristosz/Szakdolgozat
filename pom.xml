@@ -6,7 +6,11 @@
 
     <groupId>hu.banki.szakdolgozat</groupId>
     <artifactId>packageautomata</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
+    <modules>
+        <module>login</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
